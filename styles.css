@@ -9,3 +9,28 @@ body {
     color: aliceblue;
     font-family: 'Ubuntu';
 }
+
+h1 {
+    font-size: 48px;
+}
+
+.form-div {
+    display: flex;
+    padding: 20px;
+}
+
+.form-div button {
+    background-color: aliceblue;
+    border: none;
+    font-size: 26px;
+}
+
+.form-div button:hover {
+    background-color: gold;
+    border: none;
+    font-size: 26px;
+}
+
+.form-div input {
+    font-size: 26px;
+}

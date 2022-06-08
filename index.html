@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GIF Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>GIF Generator</h1>
     <div class="form-div">
-        <form>
-            <input type="text" placeholder="Search for a GIF">
-            <button action="submit">Submit</button>
+        <form action="#" method="GET">
+            <div>
+                <label for="search"></label>
+                <input type="text" id="search" name="search" placeholder="Search for a GIF" required>
+                <button action="submit" id="submit-button">Submit</button>
+            </div>
         </form>
     </div>
-    <div class="gif-grid">
+    <div class="gif-div">
     </div>
 
     <script src="script.js"></script>
