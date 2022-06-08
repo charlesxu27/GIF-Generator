@@ -16,7 +16,13 @@ h1 {
 
 .form-div {
     display: flex;
+    flex-direction: column;
     padding: 20px;
+}
+
+.form-div img {
+    width: 8vw;
+    height: auto;
 }
 
 .form-div button {
@@ -34,3 +40,13 @@ h1 {
 .form-div input {
     font-size: 26px;
 }
+
+.hidden {
+    display: None;
+}
+
+#see-more {
+    font-size: 20px;
+}
+
+

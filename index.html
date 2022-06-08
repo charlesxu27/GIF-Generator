@@ -12,18 +12,21 @@
 <body>
     <h1>GIF Generator</h1>
     <div class="form-div">
-        <form action="#" method="GET">
+        <form method="GET">
             <div>
                 <label for="search"></label>
                 <input type="text" id="search" name="search" placeholder="Search for a GIF" required>
                 <button action="submit" id="submit-button">Submit</button>
             </div>
         </form>
+        <img src="./assets/giphy_attribution.gif">
     </div>
-    <div class="gif-div">
+    <div id="gif-div">
     </div>
 
-    <script src="script.js"></script>
+    <button id="see-more">See More</button>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
