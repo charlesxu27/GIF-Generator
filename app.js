@@ -40,7 +40,7 @@ function displayResults(data) {
     const gifs = data.data.map(
         gif => (
             gifDivElement.innerHTML += `
-            <img src="${gif.images.original.url}">
+            <img src="${gif.images.original.url}" alt="${gif.title}">
             `
         )
     )
@@ -65,4 +65,19 @@ async function handleShowMore(event) {
     displayResults(data)
     currentPageNum += 1
     console.log(`Page Number: ${currentPageNum}`)
+}
+
+async function showTrending() {
+    console.log("*** Calling Show Trending ***")
+    let apiURL = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&rating=${rating}&limit=${limit}&offset=${offset}`;
+    console.log(`Calling URL: ${apiURL}`)
+    let response = await fetch(apiURL);  // make API call
+    let data = await response.json();  // convert dynamic json to static JS object
+    console.log(data);
+    displayResults(data);
+}
+
+window.onload = function () {
+    // load trending gifs
+    showTrending()
 }
