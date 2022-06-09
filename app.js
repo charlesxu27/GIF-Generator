@@ -38,7 +38,7 @@ function displayResults(data) {
         console.log("Data exists!")
     }
     const gifs = data.data.map(
-        gif => (
+        (gif) => (
             gifDivElement.innerHTML += `
             <a href=${gif.url}><img src="${gif.images.original.url}" alt="${gif.title}"></a>
             `
@@ -48,8 +48,7 @@ function displayResults(data) {
 
 async function handleFormSubmit(event) {
     console.log("*** Calling handleFormSubmit ***")
-
-    event.preventDefault()  // why do I need this?
+    event.preventDefault()  // why do I need this? Bc I don't want to have the form perform a form submission or GET call, instead, I want to make an API call.
     gifDivElement.innerHTML = `` // clear gif area before new search
     searchTerm = searchInputElement.value
     console.log(`The searched term is: ${searchTerm}`)
